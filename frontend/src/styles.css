@@ -1,0 +1,18 @@
+* { box-sizing: border-box; }
+html, body, #root { height: 100%; margin: 0; }
+.app { display: grid; grid-template-rows: auto 1fr; height: 100%; }
+.header { padding: 12px; border-bottom: 1px solid #eee; display: flex; justify-content: space-between; align-items: center; }
+.container { display: grid; grid-template-columns: 320px 1fr; height: calc(100vh - 57px); }
+.sidebar { border-right: 1px solid #eee; padding: 12px; overflow: auto; }
+.map { height: 100%; }
+.input { width: 100%; padding: 8px; margin: 6px 0; border: 1px solid #ddd; border-radius: 8px; }
+.button { padding: 10px 12px; border: 0; border-radius: 10px; cursor: pointer; margin-right: 8px; }
+.button.primary { background: #2563eb; color: white; }
+.button.danger { background: #ef4444; color: white; }
+.radio-row { display: flex; gap: 12px; }
+.stat { margin-top: 8px; font-size: 14px; }
+@media (max-width: 900px) {
+  .container { grid-template-columns: 1fr; }
+  .sidebar { height: 40vh; }
+  .map { height: 60vh; }
+}
